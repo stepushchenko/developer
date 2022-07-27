@@ -10,3 +10,9 @@
 - Запускать автоматизированные тесты 
 - Позволяет проектировать дизайн API
 - Позволяет создать Mock-сервер
+
+
+### Запросы с параметрами
+
+- `https://postman-echo.com/book/:id/` :id - это path variable
+- `https://postman-echo.com/book/?id=10` id= - это query variable
