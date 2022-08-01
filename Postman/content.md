@@ -75,6 +75,7 @@ Postman сохраняет все переменные в виде строк.
 - `pm.globals.unset("count");` удалил переменную
 - `pm.globals.replaceIn("Count = {{count}}");` позволяет вывести текст с подстановкой значения из переменной
 - `pm.globals.clear();` очистит все переменные
+
 **Переменные коллекции**
 - `pm.collectionVariables.has("count");`
 - `pm.collectionVariables.get("count");`
@@ -82,6 +83,7 @@ Postman сохраняет все переменные в виде строк.
 - `pm.collectionVariables.unset("count");`
 - `pm.collectionVariables.replaceIn("Count = {{count}}");`
 - `pm.collectionVariables.clear();`
+
 **Переменные окружения**
 - `pm.environment.has("count");`
 - `pm.environment.get("count");`
@@ -89,14 +91,17 @@ Postman сохраняет все переменные в виде строк.
 - `pm.environment.unset("count");`
 - `pm.environment.replaceIn("Count = {{count}}");`
 - `pm.environment.clear();`
+
 **Переменные уровня данных**
 - `pm.iterationData.has("count");`
 - `pm.iterationData.get("count");`
 - `pm.iterationData.unset("count");`
+
 **Локальные переменные**
 - `pm.variables.has("count")`
 - `pm.variables.get("count")`
 - `pm.variables.set("count", 3)`
+
 **Получение данных запроса**
 - `pm.request.method` содержит HTTP метод запроса
 - `pm.request.url` содержит URL запроса
@@ -106,6 +111,7 @@ Postman сохраняет все переменные в виде строк.
 - `pm.request.body` содержит тело запроса
 - `pm.request.addQueryParams("param1=value1");` добавление нового параметра в строку запроса
 - `pm.request.removeQueryParams("param1");` удаляет параметр из строки запроса
+
 **Получение данных ответа**
 - `pm.response.code` содержит код ответа
 - `pm.response.status` содержит статус ответа
@@ -114,6 +120,7 @@ Postman сохраняет все переменные в виде строк.
 - `pm.response.responseSize` содержит размер ответа
 - `pm.response.text();` содержит тело ответа в текстовом формате
 - `pm.response.json();` содержит тело ответа в JSON
+
 **Cookies**
 - `pm.cookies.has(cookieName);` проверяем существует ли кука
 - `pm.cookies.get(cookieName);` получаем значение куки
