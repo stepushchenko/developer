@@ -62,3 +62,69 @@ Interatively rebase the last 3 commits on current branch <br>
 ### Undoing Things
 Move and/or rename a file and stage move <br>
 `git mv <existing_path> <new_path>` <br>
+Remove a file from working directory and staging area, then stage the removal <br>
+`git rm <file>` <br>
+Remove from staging area only <br>
+`git rm --cached <file>` <br>
+View a previous commit  <br>
+`git checkout <commit ID>` <br>
+Create a new commit, reverting the changes from a specified commit <br>
+`git revert <commit ID>` <br>
+Go back to a previous commit and delete all commits ahead of it (rever it safer). <br>
+Add --hard flag to also delete a workspace changes. <br>
+`git reset <commit ID>`
+
+### Review your Repo
+List new or modified files not yet commited <br>
+`git status` <br>
+List commit history, with respective IDs <br>
+`git log --oneline` <br>
+Show changes to unstaged files. For changes to staged files, add --cached option. <br>
+`git diff` <br>
+Show changes between two commits <br>
+`git diff <commit ID> <commit ID>`
+
+### Stashing
+Store modified and staged changes.  <br>
+To include untracked files, add -u flag. <br>
+For untracked and ignored files, add -a flag.  <br>
+`git stash` <br>
+As above, but add a comment. <br>
+`git stash save "comment"` <br>
+Partial stash. Stash just a sing file,a collection of files, <br>
+or individual changes from within files. <br>
+`git stash -p` <br>
+List all stashes <br>
+`git stash list` <br>
+Re-apply the stash without deleting it. <br>
+`git stash apply` <br>
+Re-apply the stash at index 2, then delete if from the stash list. <br>
+Omit stash@{n} to pop the most recent stash. <br>
+`git stash pop stash@{2}` <br>
+Show the diff summary of stash 1. Pass the -p flag to see the full diff. <br>
+`git stash show stash@{1}` <br>
+Delete stash at insex 1. Omit stash@{n} to delete last stash made. <br>
+`git stash drop stash@{1}` <br>
+Delete all stashes <br>
+`git stash clear`
+
+### Synchronizing
+Add a remote repo <br>
+`git remote add <alias> <url>` <br>
+View all remote connections. Add -v flag to view urls. <br>
+`git remote` <br>
+Remove a connection <br>
+`git remote remove <alias>` <br>
+Fetch all branches from remote repo (no merge) <br>
+`git fetch <alias>` <br>
+Fetch a specific branch <br>
+`git fetch <alias> branch` <br>
+Fetch the remote repo's copy of the current branch, then merge <br>
+`git pull` <br>
+Move (rebase) your local changes onto the top of new changes made <br>
+to the remote repo (for clean, linear history) <br>
+`git pull --rebase <alias>` <br>
+Upload local content to remote repo <br>
+`git push <alias>` <br>
+Upload to a branch (can then pull request) <br>
+`git push <alias> <branch>`
