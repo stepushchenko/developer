@@ -33,6 +33,7 @@
 
 `Подробнее https://bestprogrammer.ru/programmirovanie-i-razrabotka/8-struktur-dannyh-python`
 
+- список
 - массив
 - очередь
 - стеки
@@ -41,7 +42,6 @@
 - графы
 - хеш таблицы
 - словарь (в том числе OrderedDict и defaultdict() )
-- список
 - кортеж
 
 ### Элементы языка
@@ -60,6 +60,8 @@
 ### Потоки, процессы
 `Подробнее http://onreader.mdl.ru/MasteringConcurrencyInPython/content/Ch06.html`
 - Потоки (включая GIL)
+  - mutexes
+  - semaphore
 - Процессы
 - Межпроцессное взаимодействие
 - Синхронное и асинхронное программирование
