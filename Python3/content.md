@@ -50,7 +50,7 @@
 - Генераторы `Подробнее https://habr.com/ru/post/488112/`
 
 ### Functions
-- Декораторы (functools.wraps в том числе)
+- Декораторы (functools.wraps в том числе) https://docs.google.com/presentation/d/1LCe2VMySjXsm84sYdC_GI71JnGiymeymeQglYqYr66A/edit#slide=id.g9f74094941_1_33
 
 ### Classes
 - 
