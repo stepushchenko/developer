@@ -6,7 +6,7 @@
         <link rel=stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     </head>
     <body>
-        <p>Hello, Flask!</p>
-        <img src="{{ url_for('static', filename='img/girl.jpeg') }}" alt="girl img" width="240" height="240">
+        <p>Встроенный шаблон</p>
+        {% include 'menu.html' %}
     </body>
 </html>

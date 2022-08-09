@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home page</title>
+        <meta charset="utf-8">
+        <link rel=stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <p>Вставка картинки</p>
+        <img src="{{ url_for('static', filename='img/girl.jpeg') }}" alt="girl img" width="240" height="240">
+
+        <br><br><p>Сортировка списка</p>
+        {% set myList = [a,b,c]|sort %} #}
+        {{ myList[1] }}
+
+        <br><br><p>Калькулятор</p>
+        {% if sign == "+" %}
+            {{ number1 + number2 }}
+        {% elif sign == "-" %}
+            {{ number1 + number2 }}
+        {% elif sign == "*" %}
+            {{ number1 * number2 }}
+        {% elif sign == "**" %}
+            {{ number1 ** number2 }}
+        {% elif sign == ":" %}
+            {% if number2 == 0 %}
+                Ошибка
+            {% else %}
+                {{ number1 / number2 }}
+            {% endif %}
+        {% else %}
+            Ошибка
+        {% endif %}
+
+        <br><br><p>Словарь с циклом</p>
+        {% for element in numbers.keys() %}
+            {% if element.isdigit() %}
+                {% set num = element|int %}
+                {% if num > numbers[element] %}
+                    {{ numbers[element] }}
+                {% else %}
+                    {{ num }}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+
+
+    </body>
+</html>
