@@ -69,22 +69,74 @@ TCP/IP — набор протоколов передачи данных, пол
 4. тела HTTP сообщения (необязательно)
 
 ### Код состояния HTTP response
-- 1хх: информационный код состояния HTTP сервера
-- 2xx: успешный код состояния HTTP сервера
-- 3xx: код перенаправления HTTP сервера
-- 4xx: коды ошибок HTTP клиента
-- 5xx: коды ошибок HTTP сервера
-
-Примеры:
-- 200 : Успешный запрос
-- 201 : Объект или объекты, созданные в результате успешного запроса.
-- 400 : Неверный запрос. Неверный запрос клиента.
-- 401 : Несанкционировано. Пользователь не авторизован для доступа к ресурсу и может не пройти аутентификацию
-- 403 : Запрещено. Пользователь не авторизован для доступа к ресурсу, пользователь аутентифицирован
-- 404 : Не найдено. Ресурс не найден
-- 500 : Внутренняя ошибка сервера. Общая ошибка сервера
-- 502 : Неверный шлюз. Ответ вышестоящего сервера недействителен
-- 503 : Сервис недоступен. Результат проблемы на стороне сервера, включая перегрузку или сбой системы
+- **1XX Information**
+  - 100 Continue
+  - 101 Switching Protocols
+  - 102 Processing
+  - 103 Early Hints
+- **2XX Success**
+    - 200 OK
+    - 201 Created
+    - 202 Accepted
+    - 203 Non-Authoritative Information
+    - 205 Reset Content
+    - 206 Partial Content
+    - 207 Multi-Status (WebDAV)
+    - 208 Already Reported (WebDAV)
+    - 226 IM Used (HTTP Delt Encoding)
+- **3XX Redirection**
+    - 300 Multiply Choices
+    - 301 Moved Permanently
+    - 302 Found
+    - 303 See Other
+    - 304 Not Modified
+    - 305 Use Proxy
+    - 306 Unused
+    - 307 Temporary Redirect
+    - 308 Permanent Redirect
+- **4XX Client Error**
+  - 400 Bad Request
+  - 401 Unauthorized
+  - 402 Payment Required
+  - 403 Forbidden
+  - 404 Not Found
+  - 405 Method not Allowed
+  - 406 Not Acceptable
+  - 407 Proxy Authentication Required
+  - 408 Request Timeout
+  - 409 Conflict
+  - 410 Gone
+  - 411 Length Required
+  - 412 Precondition Failed
+  - 413 Payload Too Large
+  - 414 URI Too Large
+  - 415 Unsupported Media Type
+  - 416 Range Not Satisfiable 
+  - 417 Exception Failed
+  - 418 I'm a teapot
+  - 421 Misdirected Request 
+  - 422 Unprocessable Entity (WebDAV)
+  - 423 Locked (WebDAV)
+  - 424 Failed Dependency (WebDAV)
+  - 425 Too Early
+  - 426 Upgrade Required
+  - 428 Precondition Required
+  - 429 Too Many Requests 
+  - 431 Request Header Fields Too Large
+  - 451 Unavailable for Legal Reasons
+  - 499 Client Closed Request
+- **5XX Server Error Responses**
+  - 500 Internal Server Error
+  - 501 Not Implemented
+  - 502 Bad Gateway
+  - 503 Service Unabailable
+  - 504 Gateway timeout
+  - 505 HTTP Version Not Supported
+  - 507 Insufficient Storage (WebDAV)
+  - 508 Loop Detected (WebDAV)
+  - 510 Not Extended
+  - 511 Network Authentication Required 
+  - 599 Network Connect Timeout Error
 
 ### Форматы передачи данных
 - XML — используется в SOAP (всегда) и REST-запросах (реже); 

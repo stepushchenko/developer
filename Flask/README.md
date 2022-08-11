@@ -1,25 +1,16 @@
 # Flask
 
-### Import Flask
+### Start
 ```python
-from flask import Flask
-```
+from flask import Flask  # import
 
-### Initialization class 
-```python
-app = Flask(__name__)
-```
+app = Flask(__name__) # initialization class 
 
-### Add route
-```python
-@app.route('/')
+@app.route('/')  # create route
 def index():
     return "Hello, world!"
-```
 
-### Run as a file
-```python
-if __name__ == '__main__':
+if __name__ == '__main__':  # run flask as a file
     app.run(host='localhost', port=5000)
 ```
 
@@ -79,6 +70,31 @@ def albums(album_number):
 
 **Подключение шаблонов в функции представления**
 ```python
+from flask import render_template
+
 def function():
     return render_template('template.html')
+```
+
+### Request 
+
+```python
+from flask import request
+
+request.method  # вернет POST или GET
+request.form.get  # получение данных, отправленных в форме
+```
+
+### WTForms
+WTForms – это библиотека, написанная на Python и независимая от фреймворков. <br>
+Она умеет генерировать формы, проверять их и предварительно заполнять информацией и т.д. <br>
+Для установки WTForms используется Flask-WTF.
+
+Flask-WTF – расширение для Flask, которое интегрирует WTForms во Flask. Оно же <br>
+предлагает дополнительные функции, такие как: загрузка файлов, reCAPTCHA, <br>
+интернационализация (i18n) и другие. 
+
+Установка
+```bash
+pip install flask-wtf
 ```
