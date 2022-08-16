@@ -20,7 +20,8 @@ TCP/IP — набор протоколов передачи данных, пол
 
 ### HTTP ports
 - По умолчанию HTTP смотрит на порт 80. 
-- По умолчанию HTTPS смотрит на порт 443
+- По умолчанию HTTPS смотрит на порт 443.
+- По умолчанию SSH смотрит на порт 22.
 
 ### HTTP methods
 - Метод GET : запрос данных с сервера
@@ -31,7 +32,7 @@ TCP/IP — набор протоколов передачи данных, пол
 - Метод OPTIONS : возвращает методы запроса, поддерживаемые службой.
 - Метод HEAD : возвращает метаинформацию, такую как заголовки ответа.
 
-Дополнительно: <br> <br>
+Дополнительно:
 
 Метод PUT отличается от PATCH тем, что для обновления кусочка информации на сервере с PUT<br>
 придется отправить весь объем сведений (включая измененную часть, что равно удалить и <br> 
@@ -143,9 +144,9 @@ TCP/IP — набор протоколов передачи данных, пол
 - JSON — используется в REST-запросах.
   
 ### Что такое URL, URI и URN
-- **URI** – https://wiki.merionet.ru/images/vse-chto-vam-nuzhno-znat-pro-devops/1.png
-- **URL** - https://wiki.merionet.ru
-- **URN** - images/vse-chto-vam-nuzhno-znat-pro-devops/1.png
+- URI пример `https://wiki.merionet.ru/images/vse-chto-vam-nuzhno-znat-pro-devops/1.png`
+- URL пример `https://wiki.merionet.ru`
+- URN пример `images/vse-chto-vam-nuzhno-znat-pro-devops/1.png`
 - URI = URL + URN
 
 ### Из чего состоит URI
