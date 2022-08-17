@@ -1,3 +1,22 @@
+# PYTHON
+
+### Python checks
+
+Search available python versions
+```bash
+brew search python
+```
+
+Install python3
+```bash
+brew install python3@3.10  # after @ write actual python version
+```
+
+Check all installed python3
+```bash
+which -a python3
+```
+
 ### Python - это:
 
 - Строго типизированный язык

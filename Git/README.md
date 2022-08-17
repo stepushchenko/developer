@@ -14,6 +14,8 @@
 то есть говоря простым языком, если вы решили накосячить где-нибудь на проекте внеся <br>
 свои изменения, то можно вернуть в рабочее русло исправный билд проекта.
 
+`https://gitexplorer.com/ `Git Command Explorer
+
 ### Setup
 ```bash
 # Set the name and email that will be attached to your commits and tags
