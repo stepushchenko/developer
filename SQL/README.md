@@ -18,11 +18,6 @@
 - min
 - sum
 
-### Joins
-- inner join
-- left [outer] join
-- right [outer] join
-- full [outer] join
 
 ### Operators 
 ```html
@@ -51,17 +46,17 @@ AND, OR, NOT, ANY, SOME, ALL, BETWEEN, IN, EXISTS, LIKE, IS NULL, UNIQUE   <!-- 
 5. `HAVING` условие/фильтрация на уровне сгруппированных данных; необязательно
 6. `ORDER BY` столбец, по которому хотим отсортировать вывод; необязательно
 
-### Commands
+### COMMANDS
 
 **DDL (Data Definition Language) Examples**
 
 List of commands:
-- CREATE
-- DROP
-- ALTER
-- TRUNCATE
-- RENAME
-- COMMENT
+- **CREATE**
+- **DROP**
+- **ALTER**
+- **TRUNCATE**
+- **RENAME**
+- **COMMENT**
 
 Create a table
 ```html
@@ -103,7 +98,7 @@ DROP TABLE name
 **DQL (Data Query Language) Examples**
 
 List of commands:
-- SELECT
+- **SELECT**
 
 Fetch all data from table
 ```html
@@ -199,12 +194,12 @@ ON Students.section = Section.id;
 **DML (Data Manipulation Language) Examples**
 
 List of commands:
-- INSERT
-- UPDATE
-- DELETE
-- LOCK
-- CALL
-- EXPLAIN PLAN
+- **INSERT**
+- **UPDATE**
+- **DELETE**
+- **LOCK**
+- **CALL**
+- **EXPLAIN PLAN**
 
 Insert data (rows) into a Table
 ```html
@@ -239,4 +234,143 @@ SELECT name, teacher
 FROM Students
 FULL JOIN Section
 ON Students.section = Section.id;
+```
+
+### SUBQUERIES
+
+**Single** value subqueries 
+```html
+SELECT name 
+FROM city 
+WHERE rating = (
+    SELECT rating
+    FROM city
+); 
+```
+
+**Multiply** values subqueries
+
+Allowed types:
+- IN
+- EXISTS
+- ANY
+- ALL
+
+```html
+SELECT name
+FROM city
+WHERE country_id IN (
+    SELECT country_id
+    FROM country
+    WHERE population > 20000000
+);
+```
+
+This query finds countries that have at least one city:
+```html
+SELECT name 
+FROM country 
+WHERE EXISTS (
+    SELECT *
+    FROM city
+    WHERE country_id = country.id
+);
+```
+
+### SET OPERATIONS
+
+**UNION** combines the results of two result sets and removes duplicates. 
+UNION ALL doesn't remove duplicate rows.
+This query displays German cyclists together with German skaters:
+```html
+SELECT name
+FROM cycling
+WHERE country = 'DE' 
+UNION
+SELECT name
+FROM skating
+WHERE country = 'DE';
+```
+
+**INTERSECT** returns only rows that appear in both result sets.
+This query displays German cyclists who are also German skaters at the same time:
+```html
+SELECT name
+FROM cycling
+WHERE country = 'DE'
+INTERSECT
+SELECT name
+FROM skating
+WHERE country = 'DE';
+```
+
+**EXCEPT** returns only the rows that appear in the first result 
+set but do not appear in the second result set.
+This query displays German cyclists unless they are also German skaters at the same time:
+```html
+SELECT name
+FROM cycling
+WHERE country = 'DE' 
+EXCEPT
+SELECT name
+FROM skating
+WHERE country = 'DE';
+```
+
+
+### JOINS
+
+**JOIN** (or explicitly INNER JOIN) returns rows that have matching values in both tables.
+```html
+SELECT city.name, country.name FROM city
+JOIN country
+ON city.country_id = country.id;
+```
+
+**LEFT JOIN** returns all rows from the left table with corresponding rows 
+from the right table. If there's no matching row, NULLs are returned as values from the second table.
+```html
+SELECT city.name, country.name 
+FROM city
+LEFT JOIN country
+ON city.country_id = country.id
+```
+
+**RIGHT JOIN** returns all rows from the right table with corresponding 
+rows from the left table. If there's no matching row, NULLs are 
+returned as values from the left table.
+```html
+SELECT city.name, country.name 
+FROM city
+RIGHT JOIN country
+ON city.country_id = country.id;
+```
+
+**FULL JOIN** (or explicitly FULL OUTER JOIN) returns all rows from both tables – 
+if there's no matching row in the second table, NULLs are returned.
+```html
+SELECT city.name, country.name 
+FROM city
+FULL [OUTER] JOIN country
+ON city.country_id = country.id;
+```
+
+**CROSS JOIN** returns all possible combinations of rows from both tables. 
+There are two syntaxes available.
+```html
+SELECT city.name, country.name 
+FROM city
+CROSS JOIN country;
+```
+
+```html
+SELECT city.name, country.name 
+FROM city, country;
+```
+
+**NATURAL JOIN** will join tables by all columns with the same name.
+```html
+SELECT city.name, country.name 
+FROM city
+NATURAL JOIN country;
 ```
