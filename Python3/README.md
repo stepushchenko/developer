@@ -17,6 +17,16 @@ Check all installed python3
 which -a python3
 ```
 
+Check $PYTHONPATH
+```bash
+echo $PYTHONPATH
+```
+
+Update $PYTHONPATH (needs to be in the root directory of the repo)
+```bash
+export PYTHONPATH="$PWD"
+```
+
 ### Python - это:
 
 - Строго типизированный язык

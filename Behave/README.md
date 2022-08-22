@@ -70,3 +70,8 @@ Run all tests
 ```bash
 behave
 ```
+
+Run a specific scenario
+```bash
+behave -n "scenario name"
+```
