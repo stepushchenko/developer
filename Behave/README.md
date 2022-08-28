@@ -71,7 +71,14 @@ Run all tests
 behave
 ```
 
+Run a specific feature
+```bash
+behave -i file_name.feature
+```
+
 Run a specific scenario
 ```bash
 behave -n "scenario name"
 ```
+
+
