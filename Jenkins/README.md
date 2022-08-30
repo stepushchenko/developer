@@ -36,3 +36,15 @@ Jenkins port
 ```bash
 localhost:8080
 ```
+
+### Jobs
+
+Start job from URL
+```bash
+JENKINS_URL/job/Run%20tests%20after%20push/build?token=TOKEN_NAME
+```
+
+Start job from console
+```bash
+curl http://[user_name]:[user_token]@JENKINS_URL/job/Run%20tests%20after%20push/build?token=TOKEN_NAME
+```
