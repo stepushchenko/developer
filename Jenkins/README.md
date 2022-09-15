@@ -37,6 +37,15 @@ Jenkins port
 localhost:8080
 ```
 
+
+### Installing Jenkins Ubuntu
+
+...installation Java...<br>
+...installation Jenkins...<br>
+
+Dashboard > Manage Jenkins > Configure Global Security > Git Host Key Verification Configuration.
+Then in Host Key Verification Strategy select Accept first connection.
+
 ### Jobs
 
 Start job from URL
