@@ -3,7 +3,6 @@
 ### Start
 ```python
 from flask import Flask  # import
-
 app = Flask(__name__) # initialization class 
 
 @app.route('/')  # create route
@@ -21,7 +20,10 @@ if __name__ == '__main__':  # run flask as a file
 чтобы связать URL-адрес с функцией.
 
 ### Множественные маршруты
-```bash
+```python
+from flask import Flask  # import
+app = Flask(__name__) # initialization class 
+
 @app.route('/')
 @app.route('/index')
 def index():
@@ -29,14 +31,20 @@ def index():
 ```
 
 ###  Динамические маршруты
-```bash
+```python
+from flask import Flask  # import
+app = Flask(__name__) # initialization class 
+
 @app.route("/albums/<album_number>")
 def albums(album_number):
     return f"The album number is {album_number}"
 ```
 
 ### Динамические переменные с конвертером
-```bash
+```python
+from flask import Flask  # import
+app = Flask(__name__) # initialization class 
+
 @app.route("/albums/<int:album_number>/<string:album_title>")
 ```
 
@@ -81,8 +89,8 @@ def function():
 ```python
 from flask import request
 
-request.method  # вернет POST или GET
-request.form.get  # получение данных, отправленных в форме
+variable = request.method  # вернет POST или GET
+variable2 = request.form.get  # получение данных, отправленных в форме
 ```
 
 ### WTForms

@@ -14,7 +14,7 @@
 то есть говоря простым языком, если вы решили накосячить где-нибудь на проекте внеся <br>
 свои изменения, то можно вернуть в рабочее русло исправный билд проекта.
 
-`https://gitexplorer.com/ `Git Command Explorer
+`https://gitexplorer.com/` Git Command Explorer
 
 ### Setup
 ```bash
@@ -43,7 +43,7 @@ git add .
 # Commit all staged files to the git
 git commit -m "<commit message>"
 
-# Add all changes made to thacked files and commit
+# Add all changes made to tracked files and commit
 git commit -am "<commit message>"
 ```
 
@@ -52,7 +52,7 @@ git commit -am "<commit message>"
 **origin:** default upstream repo <br>
 **HEAD:** current branch <br>
 **HEAD^:** parent of HEAD <br>
-**HEAD~4:** great-great greadparent of HEAD 
+**HEAD~4:** great-great-grandparent of HEAD 
 
 ### Branches
 ```bash

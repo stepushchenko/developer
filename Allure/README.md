@@ -1,6 +1,6 @@
 # ALLURE
 
-### Installation and usage
+### Installation and usage with Behave framework
 
 Run all features and collect results in the reports folder
 ```bash

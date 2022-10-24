@@ -1,5 +1,6 @@
-### Сетевые протоколы передачи данных
+# Internet
 
+### Сетевые протоколы передачи данных
 
 TCP - один из протоколов передачи данных интернета. <br>
 TCP реализован на уровне ядра операционной системы. <br>
@@ -64,7 +65,7 @@ TCP/IP — набор протоколов передачи данных, пол
 
 
 ### HTTP response сервера состоит из
-1. протокол + код состояния
+1. протокол + статус кода
 2. заголовков (или нуля, если заголовков нет)
 3. пустой строки, означающей окончания заголовков
 4. тела HTTP сообщения (необязательно)
@@ -76,25 +77,25 @@ TCP/IP — набор протоколов передачи данных, пол
   - 102 Processing
   - 103 Early Hints
 - **2XX Success**
-    - 200 OK
-    - 201 Created
-    - 202 Accepted
-    - 203 Non-Authoritative Information
-    - 205 Reset Content
-    - 206 Partial Content
-    - 207 Multi-Status (WebDAV)
-    - 208 Already Reported (WebDAV)
-    - 226 IM Used (HTTP Delt Encoding)
+  - 200 OK
+  - 201 Created
+  - 202 Accepted
+  - 203 Non-Authoritative Information
+  - 205 Reset Content
+  - 206 Partial Content
+  - 207 Multi-Status (WebDAV)
+  - 208 Already Reported (WebDAV)
+  - 226 IM Used (HTTP Delt Encoding)
 - **3XX Redirection**
-    - 300 Multiply Choices
-    - 301 Moved Permanently
-    - 302 Found
-    - 303 See Other
-    - 304 Not Modified
-    - 305 Use Proxy
-    - 306 Unused
-    - 307 Temporary Redirect
-    - 308 Permanent Redirect
+  - 300 Multiply Choices
+  - 301 Moved Permanently
+  - 302 Found
+  - 303 See Other
+  - 304 Not Modified
+  - 305 Use Proxy
+  - 306 Unused
+  - 307 Temporary Redirect
+  - 308 Permanent Redirect
 - **4XX Client Error**
   - 400 Bad Request
   - 401 Unauthorized
@@ -146,7 +147,7 @@ TCP/IP — набор протоколов передачи данных, пол
 ### Что такое URL, URI и URN
 - URI пример `https://wiki.merionet.ru/images/vse-chto-vam-nuzhno-znat-pro-devops/1.png`
 - URL пример `https://wiki.merionet.ru`
-- URN пример `images/vse-chto-vam-nuzhno-znat-pro-devops/1.png`
+- URN пример `images/vse/1.png`
 - URI = URL + URN
 
 ### Из чего состоит URI
