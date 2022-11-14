@@ -47,7 +47,7 @@ git commit -m "<commit message>"
 git commit -am "<commit message>"
 ```
 
-### Basic Concepts
+### Basic Branch Concepts
 **main:** default development branch <br>
 **origin:** default upstream repo <br>
 **HEAD:** current branch <br>
